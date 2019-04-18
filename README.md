@@ -1,24 +1,29 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Cuchi-orders
 
-Things you may want to cover:
+## Objetivo:
 
-* Ruby version
+Satisfacer el hambre de media mañana de los Codeablers con sanguches de carretilla.
 
-* System dependencies
+## Características mínimas:
 
-* Configuration
+### Usuarios
 
-* Database creation
+- Ofrecer una interfaz sencilla y amigable para que el usuario pueda separar sus sanguches para el día siguiente.
 
-* Database initialization
+- Presentar al usuario una lista de los productos disponibles.
 
-* How to run the test suite
+- Presentar al usuario una lista de los productos que solicitó en el día.
 
-* Services (job queues, cache servers, search engines, etc.)
+- Proteger la información de contacto de los usuarios.
 
-* Deployment instructions
+### Admin
 
-* ...
+- Interfaz sencilla para actualizar la tabla de productos.
+
+- Interfaz para ver la lista total de productos requeridos del día.
+
+- Interfaz para ver la lista de productos según usuarios del día.
+
+- Exportar los datos de pedidos para análisis.
