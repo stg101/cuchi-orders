@@ -26,6 +26,7 @@
         </pre>
       <% else %>
         <%= link_to 'Iniciar sesión', new_user_session_path %>
+        <%= link_to "Sign in with Slack", user_slack_omniauth_authorize_path %>
       <% end %>
     </div>
 
