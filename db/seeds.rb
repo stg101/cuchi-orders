@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
+Product.delete_all
 Product.create( name: 'palta', price: 15, available: true)
 Product.create( name: 'queso', price: 15, available: true)
 Product.create( name: 'huevo con hotdog', price: 15, available: true)
