@@ -25,3 +25,18 @@ Satisfacer el hambre de media mañana de los Codeablers con sanguches de carreti
 - Interfaz para ver la lista de productos según usuarios del día.
 
 - Exportar los datos de pedidos para análisis.
+
+### E/R Diagram
+
+![title](app/assets/db/er-diagram.png "E/R Diagrama")
+
+### Migrations
+
+rails g devise:install
+rails g devise user
+rails g model Product name:string price:integer available:boolean
+rails g model Order quantity:integer user:references product:references
+
+rails g controller Products
+rails g controller Users
+rails g controller Orders

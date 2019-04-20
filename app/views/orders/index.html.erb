@@ -1,0 +1,8 @@
+<pre>
+<h1>Orders</h1>
+{ 
+  <% @orders.each do |order| %>
+  <%= order.product.emoji %> : <%= order.quantity %>, <%= order.user.email %>, <%= order.created_at %>
+  <% end  %>
+}
+</pre>
