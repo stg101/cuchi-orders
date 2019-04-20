@@ -1,9 +1,41 @@
 <pre>
-<h1>Order</h1>
+<h2>Sirvase</h2>
 { 
-  <% @products.each do |product| %>
-  <button type="button">✔️</button> <button type="button">🔪</button> <%= product.name + ' ' + product.emoji %> : <%= product.price.to_f/10 %>0,
+  <% @products.each_with_index do |product, index| %>
+  <button type="button" onclick="addOrder(<%=index%>)">✔️</button> <button type="button" onclick="popOrder(<%=index%>)">🔪</button> <%= product.name + ' ' + product.emoji %> : <%= product.price.to_f/10 %>0,
 
   <% end  %>
 }
+
+<form action="/users/<%= params['id'] %>" method="post">
+<h2>Order</h2>
+{ 
+  <% @products.each_with_index do |product, index| %>
+  <%= product.name%> : <b id="<%=index%>">0</b>  <input type="hidden" name="input" class="<%=index%>" value="0">  
+  <% end  %>
+}
+
+<input type="submit" value="Submit">
+</form>
+
 </pre>
+
+<script>
+  // var order_count = new Array(@products.count).fill(0);
+  function addOrder(id) {
+    e = parseInt(document.getElementById(id).innerHTML);
+    if (e < 5) {
+      document.getElementById(id).innerHTML = e + 1;
+      document.getElementsByClassName(id)[0].value = e + 1;
+    }
+  }
+
+  function popOrder(id) {
+    e = parseInt(document.getElementById(id).innerHTML);
+    if (e > 0) { 
+      document.getElementById(id).innerHTML = e - 1;
+      document.getElementsByClassName(id)[0].value = e - 1;
+    }
+  }
+  
+</script>
