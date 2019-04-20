@@ -28,4 +28,4 @@ Satisfacer el hambre de media mañana de los Codeablers con sanguches de carreti
 
 # E/R Diagram
 
-[tables](./er-diagram.png)
+![title](app/assets/db/er-diagram.png "E/R Diagrama")
