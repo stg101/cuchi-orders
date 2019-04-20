@@ -40,3 +40,5 @@ rails g model Order quantity:integer user:references product:references
 rails g controller Products
 rails g controller Users
 rails g controller Orders
+
+rails g migration AddOmniauthToUsers provider:string uid:string

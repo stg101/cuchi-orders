@@ -16,19 +16,23 @@
 
   <body>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+
 
     <div>
       <% if current_user %>
-        Has iniciado sesión como <strong><%= current_user.email %></strong>!
-        <%= link_to 'Cerrar sesión', destroy_user_session_path, method: :delete %>
+        <pre>
+  Hi <strong><%= current_user.email %></strong>! <%= link_to 'Cerrar sesión', destroy_user_session_path, method: :delete %>
+  
+        </pre>
       <% else %>
         <%= link_to 'Iniciar sesión', new_user_session_path %>
+        <%= link_to "Sign in with Slack", user_slack_omniauth_authorize_path %>
       <% end %>
     </div>
 
     <%= yield %>
 
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
   </body>
 </html>

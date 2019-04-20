@@ -10,13 +10,13 @@ class OrdersController < ApplicationController
   def new
     @products = Product.all
     @order = Order.new
-    @orders = Order.all
+    @orders = Order.where(["user_id = ?", current_user.id])
   end
 
   def create
     product_id = params[:order][:product_id]    
     # @order = Order.find_by(product_id: product_id)
-    @order = Order.where(["product_id = ?", product_id]).last
+    @order = Order.where(["user_id = ?", current_user.id]).where(["product_id = ?", product_id]).last
 
     if @order
       @order.update(quantity: @order.quantity + 1)

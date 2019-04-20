@@ -8,6 +8,8 @@
 
 Order.delete_all
 Product.delete_all
+User.delete_all
+
 Product.create( name: 'palta', price: 15, available: true, emoji: '🥑')
 Product.create( name: 'queso', price: 15, available: true, emoji: '🧀')
 Product.create( name: 'huevo con hotdog', price: 15, available: true, emoji: '🌭')
