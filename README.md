@@ -25,3 +25,7 @@ Satisfacer el hambre de media mañana de los Codeablers con sanguches de carreti
 - Interfaz para ver la lista de productos según usuarios del día.
 
 - Exportar los datos de pedidos para análisis.
+
+# E/R Diagram
+
+[tables](./er-diagram.png)
