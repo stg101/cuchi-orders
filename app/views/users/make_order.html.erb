@@ -1,0 +1,9 @@
+<pre>
+<h1>Order</h1>
+{ 
+  <% @products.each do |product| %>
+  <button type="button">✔️</button> <button type="button">🔪</button> <%= product.name + ' ' + product.emoji %> : <%= product.price.to_f/10 %>0,
+
+  <% end  %>
+}
+</pre>

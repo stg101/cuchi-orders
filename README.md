@@ -36,6 +36,6 @@ rails g devise:install
 rails g devise user
 rails g model Product name:string price:integer available:boolean
 rails g model Order quantity:integer user:references product:references
-rails g controller Products index show
 
+rails g controller Products
 rails g controller Users
