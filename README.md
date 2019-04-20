@@ -26,6 +26,6 @@ Satisfacer el hambre de media mañana de los Codeablers con sanguches de carreti
 
 - Exportar los datos de pedidos para análisis.
 
-# E/R Diagram
+### E/R Diagram
 
 ![title](app/assets/db/er-diagram.png "E/R Diagrama")
