@@ -9,8 +9,8 @@ class OrdersController < ApplicationController
 
   def new
     @products = Product.all
-    @order = Order.where(["user_id = ?", current_user.id])
-    @orders = Order.all
+    @order = Order.new
+    @orders = Order.where(["user_id = ?", current_user.id])
   end
 
   def create
