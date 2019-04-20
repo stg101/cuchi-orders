@@ -29,3 +29,9 @@ Satisfacer el hambre de media mañana de los Codeablers con sanguches de carreti
 ### E/R Diagram
 
 ![title](app/assets/db/er-diagram.png "E/R Diagrama")
+
+### Migrations
+
+rails g devise:install
+rails g devise user
+rails g model Product name:string price:integer available:boolean
