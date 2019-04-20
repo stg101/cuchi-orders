@@ -1,5 +1,9 @@
 <h1>Products</h1>
-<% @products.each do |product| %>
-  <p> <%= product.name %> </p>
-  <p> <%= product.price %> </p>
-<% end  %>
+<pre>
+<p> { 
+  <% @products.each do |product| %>
+    <%= product.name %> : <%= product.price.to_f/10 %>0,
+    
+  <% end  %>
+}</p>
+</pre>
