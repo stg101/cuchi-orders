@@ -12,10 +12,13 @@
   <% end  %>
 }
 
-<h2>Orders</h2>
+<h2>Mi pedido</h2>
 { 
   <% @orders.each do |order| %>
   <%= order.product.name %> <%= order.product.emoji %> : <%= order.quantity %>,
   <% end  %>
 }
+
+<%= button_to "Cerrar pedido", orders_path, method: :get %>
+
 </pre>
