@@ -1,0 +1,9 @@
+<pre>
+<h1>Orders</h1>
+{ 
+  <% @orders.each do |order| %>
+  <%= order.name %> : <%= order.price.to_f/10 %>0,
+
+  <% end  %>
+}
+</pre>
