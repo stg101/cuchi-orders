@@ -7,11 +7,12 @@
   <% end  %>
 }
 
-<form action="/users/<%= params['id'] %>" method="post">
+<form action="/orders/new" method="post">
+  <input type="hidden" name="user_id" value="<%= params['id'] %>"> 
 <h2>Order</h2>
 { 
   <% @products.each_with_index do |product, index| %>
-  <%= product.name%> : <b id="<%=index%>">0</b>  <input type="hidden" name="input" class="<%=index%>" value="0">  
+  <%= product.name%> : <b id="<%=index%>">0</b>  <input type="hidden" name="<%= product.id %>" class="<%=index%>" value="0">  
   <% end  %>
 }
 
