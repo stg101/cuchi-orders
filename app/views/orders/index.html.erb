@@ -1,8 +1,10 @@
 <pre>
 <h1>Orders</h1>
+<%= button_to "Seguir pidiendo", new_order_path, method: :get , class: 'btn' %>
 { 
   <% @orders.each do |order| %>
   <%= order.product.emoji %> : <%= order.quantity %>, <%= order.user.email %>, <%= order.created_at %>
   <% end  %>
 }
+
 </pre>
