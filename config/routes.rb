@@ -9,5 +9,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :products
+  resources :products 
+  resources :orders 
+
 end
