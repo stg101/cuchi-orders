@@ -10,11 +10,6 @@ Rails.application.routes.draw do
   end
 
   resources :products 
-
-  resources :orders do
-    collection do
-      get :create_orders
-    end
-  end
+  resources :orders 
 
 end

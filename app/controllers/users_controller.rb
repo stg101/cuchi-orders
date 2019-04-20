@@ -8,8 +8,4 @@ class UsersController < ApplicationController
     @user = User.find(params['id'])
   end
 
-  def make_order
-    @products = Product.all
-    render 'users/make_order'
-  end
 end
