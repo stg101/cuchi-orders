@@ -1,6 +1,5 @@
-<pre>
 <h2>Sirvase</h2>
-
+<pre>
 { 
   <% @products.each_with_index do |product, index| %>  
     
@@ -12,10 +11,11 @@
   <% end  %>
 }
 
-<h2>Orders</h2>
+<h2>Mi pedido</h2>
 { 
   <% @orders.each do |order| %>
   <%= order.product.name %> <%= order.product.emoji %> : <%= order.quantity %>,
   <% end  %>
 }
 </pre>
+<%= button_to "Cerrar pedido", orders_path, method: :get , class: 'btn' %>
