@@ -8,7 +8,7 @@ body {
 }
 
 .btn {
-  margin: 30px auto;
+  margin: 10px auto;
   padding: 12px 24px;
 
   overflow: hidden;
@@ -36,11 +36,11 @@ body {
   background-color: #adab08;
 }
 
-.btn.orange {
-  background-color: #e67e22;
+.btn.green {
+  background-color: #0eaa00;
 }
 
-.btn.orange:hover,
-.btn.orange:focus {
-  background-color: #d35400;
+.btn.green:hover,
+.btn.green:focus {
+  background-color: #064b00;
 }
