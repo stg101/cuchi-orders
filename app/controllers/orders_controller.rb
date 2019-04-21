@@ -34,9 +34,10 @@ class OrdersController < ApplicationController
   end  
 
   def destroy
-    @order = Order.find(params[:id])
-    @order.destroy
-    redirect_to orders_path, notice: "The order was successfully deleted"
+    # @order = Order.find(params[:id])
+    Order.where(["user_id = ?", current_user.id]).delete_all
+    # redirect_to orders_path, notice: "The order was successfully deleted"
+    redirect_to new_order_path, notice: "The order was successfully cleared"    
   end
   
   def order_params
