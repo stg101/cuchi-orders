@@ -23,8 +23,19 @@ body {
   // opacity: 0.5;
   color: #04090a;
   font-size: 15px;
+  font-weight: bold;
 
   transition: background-color 0.3s;
+}
+
+.btn.red {
+  background-color: #f16334;
+  color: rgb(255, 255, 255);
+}
+
+.btn.red:hover,
+.btn.red:focus {
+  background-color: #994123;
 }
 
 .btn.yellow {
@@ -37,7 +48,8 @@ body {
 }
 
 .btn.green {
-  background-color: #0eaa00;
+  background-color: #28a745;
+  color: #fff;
 }
 
 .btn.green:hover,
