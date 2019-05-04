@@ -4,7 +4,9 @@
 
 body {
   margin: 300;
-  font-family: monospace, Helvetica, sans-serif;
+  // font-family: monospace, Helvetica, sans-serif;
+  // font-family: Andale Mono, AndaleMono, monospace;
+  font-family: Optima, Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif;
 }
 
 .btn {
@@ -19,40 +21,55 @@ body {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 
   background-color: #ffffff;
-  // background-color: rgba(251, 255, 0, 0.5);
-  // opacity: 0.5;
   color: #04090a;
   font-size: 15px;
   font-weight: bold;
 
   transition: background-color 0.3s;
+  flex: 1;
+
+  &.red {
+    background-color: rgb(185, 65, 63);
+    color: rgb(255, 255, 255);
+
+    &:hover,
+    &:focus {
+      background-color: rgb(134, 47, 45);
+    }
+  }
+
+  &.yellow {
+    background-color: #f0ec18;
+
+    &:hover,
+    &:focus {
+      background-color: #adab08;
+    }
+  }
+
+  &.green {
+    background-color: #28a745;
+    color: #fff;
+
+    &:hover,
+    &:focus {
+      background-color: #064b00;
+    }
+  }
 }
 
-.btn.red {
-  background-color: #f16334;
-  color: rgb(255, 255, 255);
+.hash {
+  font-family: Andale Mono, AndaleMono, monospace;
+  // background-color: #28a745;
+  &.items {
+    // position: relative;
+    background-color: #28a745;
+    // right: 50px;
+  }
 }
 
-.btn.red:hover,
-.btn.red:focus {
-  background-color: #994123;
-}
-
-.btn.yellow {
-  background-color: #f0ec18;
-}
-
-.btn.yellow:hover,
-.btn.yellow:focus {
-  background-color: #adab08;
-}
-
-.btn.green {
-  background-color: #28a745;
-  color: #fff;
-}
-
-.btn.green:hover,
-.btn.green:focus {
-  background-color: #064b00;
+.hrz-btn {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
