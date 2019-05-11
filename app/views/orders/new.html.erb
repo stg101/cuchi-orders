@@ -1,5 +1,5 @@
-<h2>Sirvase</h2>
-<pre>
+<h3>Sirvase</h3>
+<div class="hash">
 { 
   <% @products.each_with_index do |product, index| %>  
     
@@ -7,16 +7,25 @@
       <%= product.name %> <%=product.emoji %> : <%= product.price.to_f/10 %>0,
       <%= f.hidden_field :product_id, value: product.id %>
       <%= f.submit "✔️" %>
-    <% end %>    
-  <% end  %>
-}
+    <% end %>
 
-<h2>Mi pedido</h2>
-{ 
-  <% @orders.each do |order| %>
-  <%= order.product.name %> <%= order.product.emoji %> : <%= order.quantity %>,
   <% end  %>
 }
-</pre>
-<%= button_to "Completar pedido", orders_path, method: :get , class: 'btn green' %>
-<%= button_to "Limpiar pedido", order_path(1), method: :delete , class: 'btn' %>
+</div>
+
+<h3>Mi pedido</h3>
+
+<div>
+  { 
+    <div class="hash items">
+      <% @orders.each do |order| %>      
+        <div> <%= order.product.name %> <%= order.product.emoji %> : <%= order.quantity %>, </div>            
+      <% end  %>
+    </div>
+  }
+</div>
+
+<div class = "hrz-btn">
+  <%= button_to "Completar pedido", orders_path, method: :get , class: 'btn red' %>
+  <%= button_to "Limpiar pedido", order_path(1), method: :delete , class: 'btn' %>
+</div>
